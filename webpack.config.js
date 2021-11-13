@@ -1,7 +1,7 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
-const isDevelopment = process.env.NODE_ENV == 'production';
+const isDevelopment = process.env.NODE_ENV !== 'production';
 
 
 module.exports={
@@ -35,10 +35,16 @@ plugins:[
 module:{
 rules:[
     {
-        test:/\.jsx$/,
+        test:/\.jsx$/, 
         exclude:/node_modules/,
         use: 'babel-loader',
-    }
+    },
+    {
+        test:/\.scss$/,
+        exclude:/node_modules/,
+        use: ['style-loader','css-loader', 'sass-loader']
+
+    },
 ]
 },
 
