@@ -1,7 +1,12 @@
-body{
-background-color: gray;
-
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-h1{
-color:white;
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: #121214;
+    text-decoration: none;
+    list-style: none;
 }
